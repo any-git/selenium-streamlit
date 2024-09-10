@@ -6,6 +6,7 @@ import streamlit as st
 
 options = Options()
 options.add_argument("--headless")
+options.add_argument("--disable-gpu")
 
 
 @st.cache_resource
