@@ -9,7 +9,7 @@ os.system("apt download firefox-esr")
 files = os.listdir()
 st.code(files)
 firefox_deb = [file for file in files if ".deb" in file]
-os.system(f"dpkg -x {firefox_deb[0]}")
+os.system(f"dpkg -x {firefox_deb[0]} .")
 
 options = Options()
 options.add_argument("--headless")
