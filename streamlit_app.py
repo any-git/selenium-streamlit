@@ -7,7 +7,7 @@ import streamlit as st
 options = Options()
 options.add_argument("--headless")
 options.add_argument("--disable-gpu")
-
+options.add_argument("--no-sandbox")
 
 @st.cache_resource
 def get_driver():
