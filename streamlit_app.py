@@ -19,3 +19,4 @@ if url:
     driver = get_driver()
     driver.get(url)
     st.code(driver.page_source)
+    driver.quit()
