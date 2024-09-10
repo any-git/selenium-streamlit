@@ -5,15 +5,16 @@ from selenium.webdriver.firefox.service import Service
 from webdriver_manager.firefox import GeckoDriverManager
 import streamlit as st
 
-os.system("apt download firefox-esr")
-files = os.listdir()
-st.code(files)
-firefox_deb = [file for file in files if ".deb" in file]
-os.system(f"dpkg -x {firefox_deb[0]} .")
+
 
 
 @st.cache_resource
 def get_driver():
+    os.system("apt download firefox-esr")
+    files = os.listdir()
+    st.code(files)
+    firefox_deb = [file for file in files if ".deb" in file]
+    os.system(f"dpkg -x {firefox_deb[0]} .")
     options = Options()
     options.add_argument("--headless")
     options.binary_location = f"{os.getcwd()}/usr/bin/firefox"
