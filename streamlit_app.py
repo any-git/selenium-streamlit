@@ -11,7 +11,6 @@ def get_driver():
 
 
 options = Options()
-options.add_argument("--disable-gpu")
 options.add_argument("--headless")
 
 url = st.text_input("URL")
