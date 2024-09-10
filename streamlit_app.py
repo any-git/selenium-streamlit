@@ -5,9 +5,9 @@ from selenium.webdriver.firefox.service import Service
 from webdriver_manager.firefox import GeckoDriverManager
 import streamlit as st
 
-os.system("apt download firefox")
+os.system("apt download firefox-esr")
 files = os.listdir()
-st.code(os.getcwd())
+st.code(files)
 firefox_deb = [file for file in files if ".deb" in file]
 os.system(f"dpkg -x {firefox_deb[0]}")
 
